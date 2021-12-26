@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="header p-5 mb-5">
+    <h1 class="text-center" >  Mi Guia de Bootstrap 5 
+    </h1>
+    <p class="text-center text-white" >Bootstrap  Basico </p>
+
+</header>
+
+<!-- *********************************** -->
+<!-- Containers:
+Permiten centrar el contenido horizontalmente de tu pagina web se van adaptando segun el dispositivo movil
+En bootstrap 5 hay 6 contenedores en otras versiones solo existian 2 -->
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Contenedores</h1>
+<!--container: Se centra pero conforme se haga mas pequeña la pantalla  va a ir dando brincos -->
+<div class="container" >
+    Conteiner
+</div>
+<!--container-fluid: Va ocupar todo el espacio disponible no se centra -->
+<div class="container-fluid" >
+    Conteneiner-fluid
+</div>
+</section>
+<hr>
+<!-- En bootstrap muchos elementos cambian su apariencia o se adaptan al ancho de pantalla de acuerdo al nombre de una clase que se añade al final del componente 
+
+TAMAÑOS:
+Extra Chico - xs -> Menor a 576px           Ejemplo: container-xs
+Chico - sm -> Mayor a 576px                    Ejemplo: container-sm
+Mediano - md - Mayor a 786px                Ejemplo: container-md
+Grande - lg - Mayor a 992px                    Ejemplo: container-lg
+Extra Grande - xl -> Mayor a 1200px       Ejemplo: container-xl
+XXL Grande - xxl -> Mayor a 1400px       Ejemplo: container-xxl
+
+Estos nombres se pueden añadir a distintos elementos como lo son columnas, alineacion, containers entre otros
+
+-->
+<!-- LOS NUEVOS CONTAINERS EN BOOTSTRAP 5 -->
+<div class="container-xs">container-xs</div>
+<div class="container-sm">container-sm</div>
+<div class="container-md">container-md</div>
+<div class="container- lg">container-lg</div>
+<div class="container-xl">container-xl</div>
+<div class="container- xxl">container-xxl</div>
+
+
+<!-- *********************************** -->
+<!-- GRID:
+Bootstrap es un framework enfocado en la creacion de sitios Responsive y Movile First
+Cuenta con un grid basado en flexbox para poder crear cualquier diseño.
+Las columnas inician con la palabra col- seguido de un valor opcional que es el tamaño de un media querie y finalmente la cantidad de columnas ,  Ejemplo: col-6 o col-md-6
+Por default son 12 columnas pero las podemos cambiar on ssas
+
+-->
+<hr>
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" > Grid </h1>
+<!-- tenemos que declarar un contenedor con un tamaño -->
+<div class="container-xl">
+    <!-- despues tenemos qu declarar un row para poder trabajar con las columnas -->
+    <div class="row">
+        <!-- Ya podemos trabajar con columnas, apartir de los 786px(md) hacia arriba vamos a tener las 2 columnas -->
+        <div class="col-md-8"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint voluptas officia! Ea, inventore voluptatem? Quod praesentium delectus, laudantium deserunt suscipit voluptatibus nesciunt neque unde nulla corporis? Fugiat, commodi. Placeat. </div>
+        <div class="col-md-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi saepe ea necessitatibus error assumenda sed, placeat animi ex et exercitationem fuga tenetur magni odit beatae minus non consequuntur! Earum, consequuntur! </div>
+
+    </div>
+</div>
+
+</section>
+
+<hr>
+<!-- *********************************** -->
+<!-- 
+    Bootstrap tiene una gran cantidad de clases y estilos para los textos 
+    Propiedades como font-weight,text-align pueden ser controlados por medio de estas clases.
+    Muchas de las clases  se pueden ir mezclar con media queries para ir modificando su apariencia segun el dispositivo.
+    Por medio de SASS o CSS es posible realizar cambios a la tipografia para ajustar a tu diseño 
+ -->
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Tipografias</h1>
+<h1>Encabezado 1</h1>
+<h2>Encabezado 1</h2>
+<h3>Encabezado 1</h3>
+<h4>Encabezado 1</h4>
+<h5>Encabezado 1</h5>
+<h6>Encabezado 1</h6>
+<p>Este es un parrafo</p>
+
+<!-- Displays  -->
+<h1  class="display-1" >Display 1</h1>
+<h1  class="display-2" >Display 2</h1>
+<h1  class="display-3" >Display 3</h1>
+<h1  class="display-4" >Display 4</h1>
+<h1  class="display-5" >Display 5</h1>
+<h1  class="display-6" >Display 6</h1>
+<p  class="display-1">Este es un parrafo con display 1</p>
+
+<!-- Font Size -->
+<h1 class="fs-1"> Encabezado con Font-Size 1</h1>
+<h1 class="fs-2"> Encabezado con Font-Size 2</h1>
+<h1 class="fs-3"> Encabezado con Font-Size 3</h1>
+<h1 class="fs-4"> Encabezado con Font-Size 4</h1> 
+<h1 class="fs-5"> Encabezado con Font-Size 5</h1>
+<h1 class="fs-6"> Encabezado con Font-Size 6</h1>
+
+<p class="fs-1" >Parrafo con Font-Size</p>
+
+<!-- Utilidades para alinear texto -->
+<p class="text-start" >Alineando texto a la iquierda</p>
+<p class="text-end" >Alineando texto a la derecha</p>
+<p class="text-center" >Alineando texto al centro</p>
+
+<!-- Utilidades para alinear texto  con media queries-->
+<p class="text-end  text-md-center text-lg-start text-xl-end" > texto a la derecha centro e izquierda   
+
+</p>
+
+<!-- Convertir a mayusculas o inusculas -->
+<p class="text-lowercase" >MINUSCULAS</p>
+<p class="text-uppercase" >mayusculas</p>
+<p class="text-capitalize" >Encabezado con tipo capitalize</p>
+
+<!-- Controlar el grosor de la fuente (font-weight) -->
+<p  class="fw-bold" >Texto</p>
+<p class="fw-normal">Texto</p>
+<p class="fw-light">Texto</p>
+
+</section>
+<!-- *********************************** -->
+<hr>
+
+<section  class="seccion" >
+
+    <!-- bootstrap contiene una gran  cantidad de clases para  modificar un color de  u  texto o sufondo.
+    Todos los colores comienzan con un text-  bg- seguido del color que desea utilizar.
+    text es para textos y bg es para los backgrounds
+    Colores:
+    -primary,secondary,success,danger,warning,info,light,dark,white
+    La paleta de colores por default puede ser modificada por medio de SASS o tambien reescribirse  con CSS
+    
+    -->
+
+<h1 class="text-center my-5 heading" >Colores en Bootstrap</h1>
+
+<h1 class="text-primary bg-warning">Colores en textos</h1>
+<h1 class="text-secondary bg-info">Colores en textos</h1>
+<h1 class="text-success bg-light">Colores en textos</h1>
+<h1 class="text- danger bg-dark">Colores en textos</h1>
+</section>
+<!-- *********************************** -->
+<hr>
+<!-- Imagenes en bootstrap
+Con una sola clase es posible hacer una imagen responsive .
+Tambien existen clases para alinear imagenes o agregarles un efecto
+-img-fluid: es para hacer la imagen rsponsive
+--img-thumbnail: agrega un efecto en el borde
+-->
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Imagenes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img  class="img-thumbnail" src="img/producto2-min.jpg" alt="Imagen del mueble">
+</section>
+        </div>
+    </div>
+</div>
+<!-- *************************** -->
+<hr>
+<!-- Bootstrap tiene una gran cantidad de  botones con diferente apariencia,color,tamaño,etc -->
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" > Botones</h1>
+<button type="button" class="btn btn-primary">Agregar</button>
+<button type="button" class="btn btn-danger">Eliminar</button>
+<button type="button" class="btn btn-warning">Comprobar</button>
+<button type="button" class="btn btn-dark">Comprobar</button>
+<!-- enlace -->
+<a href="#" class="btn btn-primary">enlace</a>
+  </section>
+<!-- Input -->
+<input type="submit" class="btn btn-primary" value="Enviar formulario">
+
+<!-- Outline -->
+<a href="#" class="btn btn-outline-primary">enlace</a>
+  </section>
+  <a href="#" class="btn btn-outline-danger">enlace</a>
+  </section>
+  <a href="#" class="btn btn-outline-warning">enlace</a>
+  </section>
+
+  <!-- Cambiarle el tamaño a los botones -->
+<button type="button" class="btn btn-primary btn-lg">Agregar</button>
+<button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+
+
+<!-- deshabilitar botones -->
+<button type="button" class="btn btn-dark" disabled>Comprobar</button>
+
+  <!-- *************************** -->
+<hr> <br>
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Imagenes</h1>
+<button type="button" class="btn btn-primary">Agregar <i class="bi bi-person-plus-fill"></i></button>
+<button type="button" class="btn btn-danger">Eliminar <i class="bi bi-trash-fill"></i></button>
+<button type="submit" class="btn btn-primary" > Enviar formulario <i class="bi bi-credit-card"></i></button>
+<button type="submit" class="btn btn-danger" > Eliminar <i class="bi bi-x-lg"></i></button>
+  </section>
+
+  <!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" > Paddings y Margins</h1>
+<!-- Para los paddings y margins :
+  todos empezaran con p o m segun sea el caso -Puede ser t= top,b= bottom, e= derecha,s= izquierda, si escribimos px seran para el margen de izquierda y derecha y  si escribimos py es para el margen de arriba y abajo 
+  -para darle una medida seria un nemuero del 1 al 5
+  -El margin tambien soporta el auto
+ -->
+<div class="container-xl">
+  <div class="bg-success p-1 mb-1">
+    Ejemplo de padding y margin    
+  </div>
+  <div class="bg-danger p-5">
+    Ejemplo de padding y margin    
+  </div>
+
+    
+<!-- ********************************** -->
+    <div class="d-grid gap-4">
+        <div class="bg-success text-white p-1 ">
+      Ejemplo de padding y margin    
+    </div>
+    <div class="bg-danger text-white p-5">
+      Ejemplo de padding y margin    
+    </div>
+
+    </div>
+
+
+</div>
+
+
+  </section>
+
+<!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" > Spinners</h1>
+<div class="spinner-border bg-info text-warning spinner-border-sm"></div>
+<div class="spinner-border text-danger"></div>
+<div class="spinner-border text-success"></div>
+<div class="spinner-border text-warning"></div>
+<div class="spinner-border bg-primary text-info"></div>
+
+<div class="d-flex justify-content-center" >
+  <div class="spinner-border text-primary " roles="status">
+    <span class="visually-hidden"> cargando...</span> 
+  </div>
+
+</div>
+
+  </section>
+
+  <!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Cards</h1>
+<!-- Esto funciona mejor si lo ponemos dentro de un  grid -->
+<div class="container-xl">
+  <div class="row">
+
+    <!-- Segunda imagen -->
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <!-- para hacer que la imagen se ajuste y sea responsive -->
+        <img class="card-img-top"  src="img/galeria_02-min.jpg" alt="imagen mueble">
+        <div class="card-body">
+          <h3 class="card-title" > Decoracion de Interiores</h3>
+          <p class="card-text"> Curso de Decoracion de Interiores</p>
+          <!-- El w-100 es lo mismo que el width:100% ; para que el boton abarque todo el espacio -->
+          <a href="#" class="btn btn-primary w-100" >Tomar Curso</a>
+        </div>
+      </div>
+    </div>
+
+     <!-- Tercera imagen -->
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <!-- para hacer que la imagen se ajuste y sea responsive -->
+        <img class="card-img-top"  src="img/galeria_03-min.jpg" alt="imagen mueble">
+        <div class="card-body">
+          <h3 class="card-title" > Decoracion de Interiores</h3>
+          <p class="card-text"> Curso de Decoracion de Interiores</p>
+           <!-- El w-100 es lo mismo que el width:100% ; para que el boton abarque todo el espacio -->
+          <a href="#" class="btn btn-primary w-100" >Tomar Curso</a>
+        </div>
+      </div>
+    </div>
+
+     <!-- Primera imagen -->
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <!-- para hacer que la imagen se ajuste y sea responsive -->
+        <img class="card-img-top"  src="img/galeria_01-min.jpg" alt="imagen mueble">
+        <div class="card-body">
+          <h3 class="card-title" > Decoracion de Interiores</h3>
+          <p class="card-text"> Curso de Decoracion de Interiores</p>
+           <!-- El w-100 es lo mismo que el width:100% ; para que el boton abarque todo el espacio -->
+          <a href="#" class="btn btn-primary w-100" >Tomar Curso</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" > Formularios</h1>
+<div class="container-xl">
+  <!-- para centrar  d-flex justify-content-center -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <form >
+        <legend> <i class="bi bi-person-plus-fill"></i>  Nuevo Cliente</legend>
+          <!-- el for y e id se tiene que llamar igual para que cuando hagams click en el nombre automaticamente se ilumine el input -->
+          <div class="mb-3"  >             
+          <label  for="nombre" class="form-label" > Nombre </label>
+          <input  id="nombre" type="text" class="form-control" > 
+        </div>
+
+         <div  class="mb-3" >             
+          <label  for="empresa" class="form-label" >Empresa </label>
+          <input  id="empresa" type="text" class="form-control" > 
+        </div>
+
+        <div  class="mb-3" >      
+                 <!-- en el type ponerle el email es buena practica xq en un telefono movil va a salir el @ en el teclado -->
+          <label  for="email" class="form-label" > Email </label>
+          <input  id="email" type="email" class="form-control" > 
+        </div>
+
+        <button type="submit" class="btn btn-primary"  > <i class="bi bi-plus-circle-fill"></i>  Registrar Cliente</button>
+      </form>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Notificaciones Toast</h1>
+<button type="button" class="btn btn-primary" id="toast-btn" >Mostrar Notificacion</button>
+
+<!--  
+  -Position-fixed - es para fijar el toast a alguna parte
+  -bottom-0 - es para posicionarlo abajo
+  -start-0 - es para posicionarlo del lado derecho
+  -p-3 - es para darle un padding de 3px
+  -z-index es para que se posicione encma de todos los elementos
+  -
+-->
+<div class="position-fixed  bottom-0 start-0 p-3  style=z-index: 10; ">
+<!-- Para que podams mostrar el toast tenemos que poner este codigo de bootstrap 
+-La class="toast show"  le da un efecto a nuestra notificacion toast
+- El toast hide -- es para ocultar el toast
+-aria-live="assertive"  debe de utilizarse en las notificaciones en las que se ocupa atencion del usuario
+-aria-atomic="true" lo que hace es avisarle al navegador del dispositivo de navegacion asistida que algo cambio 
+-->
+    <div id="toast"  class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" >
+    <!-- Todo esto se va a mostrar en el header del toast -->
+      <div class="toast-header">
+        <strong class="ms-auto">Nuevo Email.....</strong>
+        <small>Hace 3 minutos</small>
+        <!-- data-bs-dismiss="toast"  s para cerrar el toast -->
+        <button type="button" data-bs-dismiss="toast" aria-label="Cerrar Notificacion" class="btn-close"></button>
+      </div>
+
+      <div class="toast-body">
+        <p>Has recibido un mensaje</p>
+      </div>
+
+</div>
+
+</div>
+
+  </section>
+
+  <!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" >Carrusel</h1>
+
+<div class="container-xl">
+  <div id="indicadores" class="carousel slide" data-bs-ride="carousel">
+    <!-- class="carousel-indicators" nos va a generar unos botones para navegar entre las imagenes
+     -->
+    <div class="carousel-indicators">
+      <button  class="active" type="button" data-bs-target="#indicadores" data-bs-slide-to="0"></button>
+      <button type="button" data-bs-target="#indicadores" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#indicadores" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#indicadores" data-bs-slide-to="3"></button>
+    </div>
+    <!-- class="carousel- inner"  vamos a tener las imagenes-->
+    <div class="carousel-inner">
+        <div class="carousel-item  active">
+          <img src="img/producto1-min.jpg" alt="slide 1" class="d-block w-100">
+        </div>
+        <div class="carousel-item  ">
+          <img src="img/producto2-min.jpg" alt="slide 1" class="d-block w-100">
+        </div>
+        <div class="carousel-item  ">
+          <img src="img/producto3-min.jpg" alt="slide 1" class="d-block w-100">
+        </div>
+        <div class="carousel-item  ">
+          <img src="img/producto4-min.jpg" alt="slide 1" class="d-block w-100">
+        </div>
+
+        <!-- Con estos botones añadimos las flechas para cambiar de foto -->
+        <button  type="button" class="carousel-control-next"   data-bs-target="#indicadores"   data-bs-slide="next" >
+          <span class="carousel-control-next-icon"  > </span>
+        </button>
+
+        <button  type="button" class="carousel-control-prev"   data-bs-target="#indicadores"  data-bs-slide="prev" >
+          <span class="carousel-control-prev-icon"  > </span>
+        </button>
+    </div>
+  </div>
+</div>
+
+
+
+  </section>
+  <!-- *************************** -->
+
+<section  class="seccion" >
+<h1 class="text-center my-5 heading" > Ventanas Modal</h1>
+  <div class="container-xl">
+    <!-- data-bs-toggle="modal": Este atributo manda a llamar a la ventana modal 
+      -data-bs-target="#modal": (le pasamos el id)Se oscurecera la pantalla
+     -->
+    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#modal" > Ver Formulario</button>
+  <!-- Modal 
+  class="modal": contiene los estilos de css para que esta ventana se vea bien 
+  -->
+    <div id="modal" class="modal fade" >
+      <!-- class= "modal-dialog"   Tambien le agrega estilos css -->
+      <div class= "modal-dialog" >
+        <div class="modal-content">
+          <!-- HEADER DEL MODAL -->
+          <div class="modal-header" >
+            <h2 class="modal-title">Nuevo Cliente </h2>
+            <button   type="button" class="btn-close"  data-bs-dismiss="modal"> </button>
+          </div>
+          <!-- BODY DEL MODAL -->
+          <div class="modal-body">
+            <form >
+              <legend> <i class="bi bi-person-plus-fill"></i>  Nuevo Cliente</legend>
+                <!-- el for y e id se tiene que llamar igual para que cuando hagams click en el nombre automaticamente se ilumine el input -->
+                <div class="mb-3"  >             
+                  <label  for="nombre" class="form-label" > Nombre </label>
+                  <input  id="nombre" type="text" class="form-control" > 
+                </div>
+
+                <div  class="mb-3" >             
+                  <label  for="empresa" class="form-label" >Empresa </label>
+                  <input  id="empresa" type="text" class="form-control" > 
+                </div>
+
+              <div  class="mb-3" >      
+                      <!-- en el type ponerle el email es buena practica xq en un telefono movil va a salir el @ en el teclado -->
+                <label  for="email" class="form-label" > Email </label>
+                <input  id="email" type="email" class="form-control" > 
+              </div>             
+            </form>
+          </div>
+
+          <!-- AQUI VAN LOS BOTONES DEL FORMULARIO -->
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-primary"  > <i class="bi bi-plus-circle-fill"></i>  Registrar Cliente</button>
+              <button  data-bs-dismiss="modal"  type="button" class="btn btn-danger" > Cerrar
+
+              </button>
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
+  
+  </div>
+  </section>
+
+
+  <section  class="seccion" >
+<h1 class="text-center my-5 heading" >  </h1>
+    <div class="container - xl">
+      <!-- class="nav justify-aling-evenly,between,end,start,center,around,evenly" 
+      flex-column: los va a mostrar de arriba hacia abajo
+      flex-md-row: cuando el dispositivo sea mediano (md) se acomodara como fila(row)
+      -->
+         <ul class="nav flex-column flex-md-row justify-content-evenly">
+           <li class="nav-item">
+             <a  class="nav-link"  href="#"> Inicio</a>
+           </li>
+           <li class="nav-item">
+             <a  class="nav-link"  href="#"> Nosotros</a>
+           </li>
+           <li class="nav-item">
+             <a  class="nav-link"  href="#"> Tienda virtual</a>
+           </li>
+           <li class="nav-item">
+             <a  class="nav-link"  href="#"> Contacto</a>
+           </li>
+           
+
+         </ul>      
+    </div>
+  </section>
+
+
+  
+  <section  class="seccion" >
+    <h1 class="text-center my-5 heading" > Dropdown menu </h1>
+
+        <div class="container - xl">
+              <!-- class="nav justify-aling-evenly,between,end,start,center,around,evenly" 
+              flex-column: los va a mostrar de arriba hacia abajo
+              flex-md-row: cuando el dispositivo sea mediano (md) se acomodara como fila(row)
+              -->
+                <ul class="nav flex-column flex-md-row justify-content-evenly">
+                  <li class="nav-item">
+                    <a  class="nav-link"  href="#"> Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a  class="nav-link  dropdown-toggle"  href="#" data-bs-toggle="dropdown"> Nosotros</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <a  class="dropdown-item" href="#"> Nuestra Historia</a>
+                        </li>
+                        <li>
+                          <a  class="dropdown-item" href="#"> Acerca de Nosotros</a>
+                        </li>
+                        <li>
+                          <a  class="dropdown-item" href="#"> Empresa </a>
+                        </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a  class="nav-link  dropdown-toggle"  href="#" data-bs-toggle="dropdown"> Tienda virtual</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <a  class="dropdown-item" href="#"> Categorias</a>
+                        </li>
+                        <li>
+                          <a  class="dropdown-item" href="#"> Nuevos Productos</a>
+                        </li>
+                        <li>
+                          <a  class="dropdown-item" href="#"> Ofertas </a>
+                        </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a  class="nav-link"  href="#"> Contacto</a>
+                  </li>
+                  
+
+                </ul>      
+        </div>
+  </section>
+
+  <!-- *************************** -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- codigo para comunicarnos con el id del toast -->
+<script>
+  document.querySelector('#toast-btn').onclick = e => {
+    /*vamos a prevenir la accioj por default que cada elemento en el navegador ya tiene*/
+    e.preventDefault();
+
+    /*
+    mostramos el toast*/
+    const toastEl = document.querySelector("#toast");
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+  }
+</script>
+<script>
+  alert("Esta es mi guia con la que estoy aprendiendo bootstrap\nNombre:Luis Armando Rojas Salazar\nNo de control: 17940110");
+</script>
+    
+</body>
+</html>
